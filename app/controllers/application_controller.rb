@@ -13,7 +13,7 @@ class ApplicationController < Sinatra::Base
   post '/login' do
     @user = User.findby(username: params[:username])
     if @user
-      session[:]
+      session[:user_id] = @user.id 
   end
 
   get '/account' do
