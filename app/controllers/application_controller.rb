@@ -24,12 +24,12 @@ class ApplicationController < Sinatra::Base
       erb :account
     else
       erb :error
-    end 
+    end
   end
 
   get '/logout' do
     session.clear
-    erb :index
+    redirect '/'
   end
 
 
