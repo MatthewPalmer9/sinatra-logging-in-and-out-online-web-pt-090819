@@ -10,7 +10,7 @@
     <h1>Welcome <%= Helpers.current_user(session).username %></h1>
     <h3>Your Balance: <%= Helpers.current_user(session).balance %></h3>
     <% else %>
-    
+    You must <a href="/login">Log In</a>
 
   </body>
 </html>
